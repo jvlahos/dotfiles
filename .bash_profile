@@ -1,3 +1,20 @@
+## JEFF
+
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+alias startPillPack='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start; rails s;'
+
+alias printColors='( x=`tput op` y=`printf %$((${COLUMNS}-6))s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done; )'
+alias hideDesktop='defaults write com.apple.finder CreateDesktop -bool false; killall Finder'
+alias showDesktop='defaults write com.apple.finder CreateDesktop -bool true; killall Finder'
+
+
+## ORIGINAL
+## https://github.com/mathiasbynens/dotfiles
+
+
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
